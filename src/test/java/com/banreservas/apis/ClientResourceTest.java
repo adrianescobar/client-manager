@@ -1,21 +1,16 @@
 package com.banreservas.apis;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import com.banreservas.entities.Client;
 
-import io.quarkus.panache.common.Sort;
 import io.quarkus.panache.mock.PanacheMock;
 import io.quarkus.test.junit.QuarkusTest;
-import io.smallrye.common.constraint.Assert;
 import io.smallrye.mutiny.Uni;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
-import static org.mockito.ArgumentMatchers.isNull;
-
 import java.util.List;
 import java.util.stream.Stream;
 
