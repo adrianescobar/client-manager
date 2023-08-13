@@ -1,8 +1,20 @@
-# client-manager
+# Client Manager
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+This is a easy API for testing concepts about Quarkus, the Supersonic Subatomic Java Framework. 
+
+The `application.properties` file have every configuration property with a default value, so you just needed to follow the instructions and that's it.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+
+## Docket instance for MySQL Database
+Run next command to create a docker container with a MySQL database.
+
+ ```shell script
+docker run --name client_manager_db -e MYSQL_DATABASE=client_manager -e MYSQL_USER=userClientDb -e MYSQL_PASSWORD=P@ssword! -e MYSQL_RANDOM_ROOT_PASSWORD=yes -p 3306:3306 -d  mysql:latest
+ ```
+
+## Postman Collection
+At the root of this project, you can see a Postman Collection `Client Manager.postman_collection.json` which have all the endpoints and request examples.
 
 ## Running the application in dev mode
 
@@ -51,11 +63,6 @@ If you want to learn more about building native executables, please consult http
 
 - Reactive MySQL client ([guide](https://quarkus.io/guides/reactive-sql-clients)): Connect to the MySQL database using the reactive pattern
 - SmallRye JWT ([guide](https://quarkus.io/guides/security-jwt)): Secure your applications with JSON Web Token
+- REST Client Reactive ([guide]https://es.quarkus.io/guides/rest-client-reactive): REST Client Reactive in order to interact with REST APIs
 
-## Provided Code
-
-### RESTEasy Reactive
-
-Easily start your Reactive RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+ 
