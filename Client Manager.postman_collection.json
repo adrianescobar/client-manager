@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "5832004e-31f7-4124-8baf-2daf1c61bc07",
+		"name": "Client Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "115528"
+	},
+	"item": [
+		{
+			"name": "Create Client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiIvcHJpdmF0ZWtleS5wZW0iLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FyZDMzMy5jb20iLCJzdWIiOiJtYWxhZ3VldG9uIiwiaWF0IjoxNjkxODk3MTg4LCJleHAiOjE2OTE5MDA3ODgsImdyb3VwcyI6WyJBRE1JTiJdLCJqdGkiOiI3YzdkNThhMS1iYjUzLTQzYjEtYjI5NS1mMjg5NDJlYzYzNjkifQ.wHfUdjAKIsxut5HJRrbYB7jf-TWfIrso4K_43W8WlVdZ-SoSseYa8s-uUSBOS9eofWF_wD6BbxrZUyCK39ZABLuvx04djRXWHIuL8nNR1xNbGGw6X-f_Yhe2VOstsEt-bN079Qhy8w4WOQ34bj1QrRfzsFNApU-iNOvxhU3qGnYrfcozqzsfcBjjwUooWGCwN4c3MESh5d2PMdqcNQ3JIdSby8E5o9ijZclwlFuVp8EZccuWvBygRRenhlRjlBtQKH210jS6dmcr8I0HunZjnpyLHO8zZAK4Xy0xFFa6qE-qbN2SMx-GxvUeQ5N82uGXFxaAN9uC33nny-2dIRfxNA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"names\": \"Joseito Vib\",\n    \"lastnames\": \"Elejo Car Ai\",\n    \"businessName\": \"Banreservas\",\n    \"email\": \"jvelejo@banreservas.com\",\n    \"address\": \"27 de febrero esq. Maximo Gomez\",\n    \"phone\": \"8099985555\",\n    \"country\": \"British Indian Ocean Territory\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiIvcHJpdmF0ZWtleS5wZW0iLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FyZDMzMy5jb20iLCJzdWIiOiJtYWxhZ3VldG9uIiwiaWF0IjoxNjkxODk3MTg4LCJleHAiOjE2OTE5MDA3ODgsImdyb3VwcyI6WyJBRE1JTiJdLCJqdGkiOiI3YzdkNThhMS1iYjUzLTQzYjEtYjI5NS1mMjg5NDJlYzYzNjkifQ.wHfUdjAKIsxut5HJRrbYB7jf-TWfIrso4K_43W8WlVdZ-SoSseYa8s-uUSBOS9eofWF_wD6BbxrZUyCK39ZABLuvx04djRXWHIuL8nNR1xNbGGw6X-f_Yhe2VOstsEt-bN079Qhy8w4WOQ34bj1QrRfzsFNApU-iNOvxhU3qGnYrfcozqzsfcBjjwUooWGCwN4c3MESh5d2PMdqcNQ3JIdSby8E5o9ijZclwlFuVp8EZccuWvBygRRenhlRjlBtQKH210jS6dmcr8I0HunZjnpyLHO8zZAK4Xy0xFFa6qE-qbN2SMx-GxvUeQ5N82uGXFxaAN9uC33nny-2dIRfxNA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"names\": \"Joseito Vib\",\n    \"lastnames\": \"Elejo Car Ai Mama\",\n    \"businessName\": \"Banreservas\",\n    \"email\": \"jvelejo@banreservas.com\",\n    \"address\": \"27 de febrero esq. Maximo Gomez #301\",\n    \"phone\": \"8099985555\",\n    \"country\": \"British Indian Ocean Territory\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clients/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Clients",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiIvcHJpdmF0ZWtleS5wZW0iLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FyZDMzMy5jb20iLCJzdWIiOiJtYWxhZ3VldG9uIiwiaWF0IjoxNjkxODk3MTg4LCJleHAiOjE2OTE5MDA3ODgsImdyb3VwcyI6WyJBRE1JTiJdLCJqdGkiOiI3YzdkNThhMS1iYjUzLTQzYjEtYjI5NS1mMjg5NDJlYzYzNjkifQ.wHfUdjAKIsxut5HJRrbYB7jf-TWfIrso4K_43W8WlVdZ-SoSseYa8s-uUSBOS9eofWF_wD6BbxrZUyCK39ZABLuvx04djRXWHIuL8nNR1xNbGGw6X-f_Yhe2VOstsEt-bN079Qhy8w4WOQ34bj1QrRfzsFNApU-iNOvxhU3qGnYrfcozqzsfcBjjwUooWGCwN4c3MESh5d2PMdqcNQ3JIdSby8E5o9ijZclwlFuVp8EZccuWvBygRRenhlRjlBtQKH210jS6dmcr8I0HunZjnpyLHO8zZAK4Xy0xFFa6qE-qbN2SMx-GxvUeQ5N82uGXFxaAN9uC33nny-2dIRfxNA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Countries",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiIvcHJpdmF0ZWtleS5wZW0iLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FyZDMzMy5jb20iLCJzdWIiOiJtYWxhZ3VldG9uIiwiaWF0IjoxNjkxODk3MTg4LCJleHAiOjE2OTE5MDA3ODgsImdyb3VwcyI6WyJBRE1JTiJdLCJqdGkiOiI3YzdkNThhMS1iYjUzLTQzYjEtYjI5NS1mMjg5NDJlYzYzNjkifQ.wHfUdjAKIsxut5HJRrbYB7jf-TWfIrso4K_43W8WlVdZ-SoSseYa8s-uUSBOS9eofWF_wD6BbxrZUyCK39ZABLuvx04djRXWHIuL8nNR1xNbGGw6X-f_Yhe2VOstsEt-bN079Qhy8w4WOQ34bj1QrRfzsFNApU-iNOvxhU3qGnYrfcozqzsfcBjjwUooWGCwN4c3MESh5d2PMdqcNQ3JIdSby8E5o9ijZclwlFuVp8EZccuWvBygRRenhlRjlBtQKH210jS6dmcr8I0HunZjnpyLHO8zZAK4Xy0xFFa6qE-qbN2SMx-GxvUeQ5N82uGXFxaAN9uC33nny-2dIRfxNA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiIvcHJpdmF0ZWtleS5wZW0iLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FyZDMzMy5jb20iLCJzdWIiOiJtYWxhZ3VldG9uIiwiaWF0IjoxNjkxODk3MTg4LCJleHAiOjE2OTE5MDA3ODgsImdyb3VwcyI6WyJBRE1JTiJdLCJqdGkiOiI3YzdkNThhMS1iYjUzLTQzYjEtYjI5NS1mMjg5NDJlYzYzNjkifQ.wHfUdjAKIsxut5HJRrbYB7jf-TWfIrso4K_43W8WlVdZ-SoSseYa8s-uUSBOS9eofWF_wD6BbxrZUyCK39ZABLuvx04djRXWHIuL8nNR1xNbGGw6X-f_Yhe2VOstsEt-bN079Qhy8w4WOQ34bj1QrRfzsFNApU-iNOvxhU3qGnYrfcozqzsfcBjjwUooWGCwN4c3MESh5d2PMdqcNQ3JIdSby8E5o9ijZclwlFuVp8EZccuWvBygRRenhlRjlBtQKH210jS6dmcr8I0HunZjnpyLHO8zZAK4Xy0xFFa6qE-qbN2SMx-GxvUeQ5N82uGXFxaAN9uC33nny-2dIRfxNA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clients/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"malagueton\",\n    \"password\": \"claverobusta\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
