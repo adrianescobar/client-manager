@@ -10,6 +10,7 @@ import com.banreservas.entities.Client;
 import io.quarkus.hibernate.reactive.panache.Panache;
 import io.quarkus.panache.common.Sort;
 import io.smallrye.mutiny.Uni;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
@@ -25,6 +26,7 @@ import static jakarta.ws.rs.core.Response.Status.CREATED;
 import static jakarta.ws.rs.core.Response.Status.NOT_FOUND;
 import static jakarta.ws.rs.core.Response.Status.OK;
 
+@RolesAllowed("ADMIN")
 @Path("/clients")
 @ApplicationScoped
 @Produces(MediaType.APPLICATION_JSON)

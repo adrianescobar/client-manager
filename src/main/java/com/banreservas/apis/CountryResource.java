@@ -8,6 +8,7 @@ import org.eclipse.microprofile.rest.client.inject.RestClient;
 import com.banreservas.entities.Country;
 import com.banreservas.services.CountryService;
 
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
@@ -24,6 +25,7 @@ public class CountryResource {
     @RestClient
     private CountryService countryService;
 
+    @RolesAllowed("ADMIN")
     @GET
     public CompletionStage<List<Country>> get(){
         return this.countryService.getAllCountries();
