@@ -27,8 +27,8 @@ import jakarta.ws.rs.core.Response.Status;
 @Consumes(MediaType.APPLICATION_JSON)
 public class AuthResource {
 
-    @ConfigProperty(name = "com.ard333.quarkusjwt.jwt.duration") public Long duration;
-	@ConfigProperty(name = "mp.jwt.verify.issuer") public String issuer;
+    @ConfigProperty(name = "com.ard333.quarkusjwt.jwt.duration", defaultValue = "3600") public Long duration;
+	@ConfigProperty(name = "mp.jwt.verify.issuer", defaultValue = "https://clientmanager.com") public String issuer;
 
     @PermitAll
 	@POST @Path("/login")
